@@ -9,13 +9,13 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ASSESSMENTAPI
 build_property.RootNamespace = ASSESSMENTAPI
-build_property.ProjectDir = E:\Lean365\New folder\New APP\ASSESSMENTAPI\ASSESSMENTAPI\
+build_property.ProjectDir = E:\Lean365\New folder\New APP\Techinical-Assessment\ASSESSMENTAPI\ASSESSMENTAPI\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Lean365\New folder\New APP\ASSESSMENTAPI\ASSESSMENTAPI
+build_property.MSBuildProjectDirectory = E:\Lean365\New folder\New APP\Techinical-Assessment\ASSESSMENTAPI\ASSESSMENTAPI
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Lean365/New folder/New APP/ASSESSMENTAPI/ASSESSMENTAPI/Views/Home/Index.cshtml]
+[E:/Lean365/New folder/New APP/Techinical-Assessment/ASSESSMENTAPI/ASSESSMENTAPI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

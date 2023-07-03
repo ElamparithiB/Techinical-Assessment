@@ -8,10 +8,10 @@
 <h4>Edit Book Information</h4>
 <hr />
 
-<div id="edit-div">
     <form id="eform">
         <div class="card-body">
             <div class="row">
+            <input type="hidden" id="BookID" name="BookID" value="@Model.BookID">
                 <div class="col-md-4 form-group">
                     <label class="form-label">Publisher <span class="required">*</span></label>
                     <input type="text" class="form-control" id="Publisher" name="Publisher" value="@Model.Publisher" maxlength="200">
@@ -45,4 +45,34 @@
            Cancel
         </a>
     </div>
-</div>
+
+
+<script type="text/javascript">
+
+
+    function Update() {
+
+        var formBook = new FormData();
+        var other_data = $('#eform').serializeArray();
+
+        $.each(other_data, function (key, input) {
+            formBook.append(input.name, input.value.replace(/\s+/g, ' ').trim());
+        });
+        $.ajax({
+            type: "POST",
+            contentType: false,
+            processData: false,
+            url: '@Url.Action("Update", "Book", new { Area = "Book" })',
+            data: formBook,
+            success: function (data) {
+                if (data.result == true) {
+                    window.location.href = '@Url.Action("Index","Book",  new { Area = "Book" })';
+                }
+                else {
+                    toastr.info(data.Message);
+                }
+            }
+        });
+    }
+
+</script>

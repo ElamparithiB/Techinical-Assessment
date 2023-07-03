@@ -46,48 +46,7 @@
 </form>
 
 <script type="text/javascript">
-    $(document).ready(function () {
-
-        $("#cform").validate({
-            normalizer: function (value) {
-                return $.trim(value);
-            },
-            rules: {
-                Publisher: {
-                    required: true,
-                },
-                Title: {
-                    required: true,
-                },
-                AuthorLastName: {
-                    required: true,
-                },
-                AuthorFirstName: {
-                    required: true
-                },
-                Price: {
-                    required: true
-                }
-            },
-            messages: {
-                Publisher: {
-                    required: "Enter Publisher"
-                },
-                Title: {
-                    required: "Enter Title"
-                },
-                AuthorLastName: {
-                    required: "Enter Author Last Name"
-                },
-                AuthorFirstName: {
-                    required: "Enter Author First Name"
-                },
-                Price: {
-                    required: "Enter Price"
-                }
-            }
-        });
-    });
+   
 
     function Create() {
        

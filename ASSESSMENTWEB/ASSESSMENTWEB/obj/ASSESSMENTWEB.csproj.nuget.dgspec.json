@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Lean365\\New folder\\New APP\\ASSESSMENTWEB\\ASSESSMENTWEB\\ASSESSMENTWEB.csproj": {}
+    "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTWEB\\ASSESSMENTWEB\\ASSESSMENTWEB.csproj": {}
   },
   "projects": {
-    "E:\\Lean365\\New folder\\New APP\\ASSESSMENTWEB\\ASSESSMENTWEB\\ASSESSMENTWEB.csproj": {
+    "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTWEB\\ASSESSMENTWEB\\ASSESSMENTWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTWEB\\ASSESSMENTWEB\\ASSESSMENTWEB.csproj",
+        "projectUniqueName": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTWEB\\ASSESSMENTWEB\\ASSESSMENTWEB.csproj",
         "projectName": "ASSESSMENTWEB",
-        "projectPath": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTWEB\\ASSESSMENTWEB\\ASSESSMENTWEB.csproj",
+        "projectPath": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTWEB\\ASSESSMENTWEB\\ASSESSMENTWEB.csproj",
         "packagesPath": "C:\\Users\\elamparithi\\.nuget\\packages\\",
-        "outputPath": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTWEB\\ASSESSMENTWEB\\obj\\",
+        "outputPath": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTWEB\\ASSESSMENTWEB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

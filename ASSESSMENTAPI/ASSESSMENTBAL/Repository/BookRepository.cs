@@ -83,6 +83,7 @@ namespace ASSESSMENTBAL.Repository
                 var res = context.Books.AsNoTracking().Where(x => x.BookId == E.BookID).FirstOrDefault();
                 if (res != null)
                 {
+                    r.BookID = res.BookId;
                     r.Publisher = res.Publisher;
                     r.Title = res.Title;
                     r.AuthorFirstName = res.AuthorFirstName;
@@ -128,13 +129,9 @@ namespace ASSESSMENTBAL.Repository
             List r = new List();
             try
             {
-                string StoredProc = "exec sp_ListBook " +
-                                    "@PageNumber = '" + B.PageNumber + "'," +
-                                    "@PageSize = '" + B.PageSize + "'," +
+                string StoredProc = "exec sp_ListBookByPublisher " +
                                     "@sort = '" + B.Sort + "'," +
                                     "@StrSearch = '" + B.SearchString + "'";
-
-                var FinanicalImpactList = context.BookList.FromSqlRaw(StoredProc).ToList();
 
                 r.BookList = (from s in context.BookList.FromSqlRaw(StoredProc).ToList()
                                                            select new
@@ -160,13 +157,9 @@ namespace ASSESSMENTBAL.Repository
             List r = new List();
             try
             {
-                string StoredProc = "exec sp_ListBook " +
-                                    "@PageNumber = '" + B.PageNumber + "'," +
-                                    "@PageSize = '" + B.PageSize + "'," +
+                string StoredProc = "exec sp_ListBookByAuthor " +
                                     "@sort = '" + B.Sort + "'," +
                                     "@StrSearch = '" + B.SearchString + "'";
-
-                var FinanicalImpactList = context.BookList.FromSqlRaw(StoredProc).ToList();
 
                 r.BookList = (from s in context.BookList.FromSqlRaw(StoredProc).ToList()
                                                            select new

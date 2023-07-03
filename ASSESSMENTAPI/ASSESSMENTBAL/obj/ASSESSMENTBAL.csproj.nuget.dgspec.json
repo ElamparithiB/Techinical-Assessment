@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTBAL\\ASSESSMENTBAL.csproj": {}
+    "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTBAL\\ASSESSMENTBAL.csproj": {}
   },
   "projects": {
-    "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTBAL\\ASSESSMENTBAL.csproj": {
+    "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTBAL\\ASSESSMENTBAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTBAL\\ASSESSMENTBAL.csproj",
+        "projectUniqueName": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTBAL\\ASSESSMENTBAL.csproj",
         "projectName": "ASSESSMENTBAL",
-        "projectPath": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTBAL\\ASSESSMENTBAL.csproj",
+        "projectPath": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTBAL\\ASSESSMENTBAL.csproj",
         "packagesPath": "C:\\Users\\elamparithi\\.nuget\\packages\\",
-        "outputPath": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTBAL\\obj\\",
+        "outputPath": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTBAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj": {
-                "projectPath": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj"
+              "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj": {
+                "projectPath": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj"
               }
             }
           }
@@ -48,6 +48,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,14 +74,14 @@
         }
       }
     },
-    "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj": {
+    "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj",
+        "projectUniqueName": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj",
         "projectName": "ASSESSMENTDAL",
-        "projectPath": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj",
+        "projectPath": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTDAL\\ASSESSMENTDAL.csproj",
         "packagesPath": "C:\\Users\\elamparithi\\.nuget\\packages\\",
-        "outputPath": "E:\\Lean365\\New folder\\New APP\\ASSESSMENTAPI\\ASSESSMENTDAL\\obj\\",
+        "outputPath": "E:\\Lean365\\New folder\\New APP\\Techinical-Assessment\\ASSESSMENTAPI\\ASSESSMENTDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -109,29 +115,21 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.4.4, )"
-            },
-            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
-              "target": "Package",
-              "version": "[7.0.8, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.8, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.8, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.8, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -140,10 +138,6 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
-            },
-            "System.Runtime.Caching": {
-              "target": "Package",
-              "version": "[7.0.0, )"
             }
           },
           "imports": [

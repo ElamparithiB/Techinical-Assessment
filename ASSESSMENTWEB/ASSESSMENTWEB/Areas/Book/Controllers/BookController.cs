@@ -48,16 +48,7 @@ namespace ASSESSMENTWEB.Areas.Book.Controllers
                 objAPIConfigure.apiConfig();
                 HttpResponseMessage response = await objAPIConfigure.client.PostAsJsonAsync("api/BookAPI/BookAPI/SaveBook", B);
                 res = JsonConvert.DeserializeObject<JsonResponse>(await response.Content.ReadAsStringAsync());
-                if (res.result == true)
-                {
-                    responseMrg = new { result = true, strmsg = res.Message };
-                }
-                else
-                {
-                    responseMrg = new { result = false, strmsg = res.Message };
-                }
-
-                return Json(responseMrg);
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -112,16 +103,7 @@ namespace ASSESSMENTWEB.Areas.Book.Controllers
                 objAPIConfigure.apiConfig();
                 HttpResponseMessage response = await objAPIConfigure.client.PostAsJsonAsync("api/BookAPI/BookAPI/UpdateBook", B);
                 res = JsonConvert.DeserializeObject<JsonResponse>(await response.Content.ReadAsStringAsync());
-                if (res.result == true)
-                {
-                    responseMrg = new { result = true, strmsg = res.Message };
-                }
-                else
-                {
-                    responseMrg = new { result = false, strmsg = res.Message };
-                }
-
-                return Json(responseMrg);
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -130,11 +112,12 @@ namespace ASSESSMENTWEB.Areas.Book.Controllers
         }
 
         // POST: BookController/Delete/5
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
             try
             {
+                Pagination P = new Pagination();
                 BookCRUD B = new BookCRUD();
                 B.BookID = id;
                 JsonResponse res = new JsonResponse();
@@ -142,16 +125,7 @@ namespace ASSESSMENTWEB.Areas.Book.Controllers
                 objAPIConfigure.apiConfig();
                 HttpResponseMessage response = await objAPIConfigure.client.PostAsJsonAsync("api/BookAPI/BookAPI/BookDelete", B);
                 res = JsonConvert.DeserializeObject<JsonResponse>(await response.Content.ReadAsStringAsync());
-                if (res.result == true)
-                {
-                    responseMrg = new { result = true, strmsg = res.Message };
-                }
-                else
-                {
-                    responseMrg = new { result = false, strmsg = res.Message };
-                }
-
-                return Json(responseMrg);
+                return RedirectToAction("Index");
             }
             catch
             {

@@ -5,10 +5,8 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE  procedure [dbo].[sp_ListBookByAuthor]
+Create  procedure [dbo].[sp_ListBookByAuthor]
 	--Declare
-	@PageNumber INT ,
-     @PageSize INT ,
      @sort varchar(50)  ,
 	 @StrSearch varchar(max)
 	 
@@ -41,9 +39,7 @@ OrderedSet.BookID
 ,OrderedSet.Price
 FROM OrderedSet '
 
-set @sql +='  ORDER BY OrderedSet.AuthorFirstName    
-OFFSET('+cast(@PageNumber as varchar(100)) +'- 1) * '+cast(@PageSize as varchar(100))+' ROWS  
-FETCH NEXT '+cast(@PageSize as varchar(100))+' ROWS ONLY OPTION (RECOMPILE);' ;
+set @sql +='  ORDER BY OrderedSet.AuthorFirstName    ' ;
 					 exec (@sql)
          END
 		 	COMMIT
