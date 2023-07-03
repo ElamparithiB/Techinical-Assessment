@@ -31,6 +31,23 @@ namespace ASSESSMENTWEB.Areas.Book.Controllers
             }
         }
 
+        public async Task<IActionResult> ListbyAuthor(Pagination B)
+        {
+            try
+            {
+                List l = new List();
+                objAPIConfigure.apiConfig();
+                HttpResponseMessage response = await objAPIConfigure.client.PostAsJsonAsync("api/BookAPI/BookAPI/BookListSortBYAuthor", B);
+                List sRes = JsonConvert.DeserializeObject<List>(await response.Content.ReadAsStringAsync());
+                l.BookList = sRes.BookList;
+                return View(l);
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
         // GET: BookController/Create/5
         public ActionResult Create()
         {

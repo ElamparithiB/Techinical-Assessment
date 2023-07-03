@@ -5,7 +5,7 @@
 
 }
 
-<h1>Book List</h1>
+<h1>Book List By Publisher</h1>
 
     <a class="btn btn-primary" href="@Url.Action("Create", "Book", new { Area = "Book" })">
         Create New
@@ -31,7 +31,7 @@
                     {
                         <tr>
                             <td>
-                                <a href="@Url.Action("Edit","Book",  new { Area = "Book", id = item.BookID })">@item.Publisher</a>
+                                <a href="@Url.Action("Details","Book",  new { Area = "Book", id = item.BookID })">@item.Publisher</a>
                                 
                             </td>
                             <td>@item.Title</td>
