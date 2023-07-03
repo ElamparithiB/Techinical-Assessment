@@ -1,0 +1,43 @@
+﻿@model ASSESSMENTWEB.Models.Books.BookCRUD
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h4>Book Details</h4>
+<hr />
+
+<div class="r-panel-body">
+    <div class="row">
+
+        <div class="col-md-12   form-group">
+            <label class="form-label"><strong>Publisher :</strong></label>
+            <label class="details-label" value="" id="Publisher">@Model.Publisher</label>
+        </div>
+        <div class="col-md-12   form-group">
+            <label class="form-label"><strong>Title :</strong></label>
+            <label class="details-label" value="" id="Title">@Model.Title</label>
+        </div>
+        <div class="col-md-12   form-group">
+            <label class="form-label"><strong>Author Last Name :</strong></label>
+            <label class="details-label" value="" id="AuthorLastName">@Model.AuthorLastName</label>
+        </div>
+        <div class="col-md-12   form-group">
+            <label class="form-label"><strong>Author First Name :</strong></label>
+            <label class="details-label" value="" id="AuthorFirstName">@Model.AuthorFirstName</label>
+        </div>
+        <div class="col-md-12   form-group">
+            <label class="form-label"><strong>Price :</strong></label>
+            <label class="details-label" value="" id="Price">@Model.Price</label>
+        </div>
+
+    </div><br />
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-secondary" href="@Url.Action("Index", "Book", new { Area = "Book" })">
+                Back to List
+            </a>
+        </div>
+    </div>
+</div>

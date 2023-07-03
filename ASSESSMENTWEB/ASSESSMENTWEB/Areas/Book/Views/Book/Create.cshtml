@@ -1,0 +1,117 @@
+﻿@model ASSESSMENTWEB.Models.Books
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Create Book Information</h4>
+<hr />
+
+    <form id="cform">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Publisher <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="Publisher" name="Publisher" maxlength="200">
+                </div>
+
+                <div class="col-md-8 form-group">
+                    <label class="form-label">Title <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="Title" name="Title" maxlength="200">
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Author Last Name <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="AuthorLastName" name="AuthorLastName" maxlength="50">
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Author First Name <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="AuthorFirstName" name="AuthorFirstName" maxlength="50">
+                </div>
+
+                <div class="col-md-4 form-group">
+                    <label class="form-label">Price <span class="required">*</span></label>
+                    <input type="number" class="form-control" id="Price" name="Price" maxlength="20">
+                </div>
+            </div>
+        </div>
+    <div class="card-footer">
+        <button class="btn btn-primary mr-2" onclick="Create();">Save</button>
+        <a class="btn btn-secondary" href="@Url.Action("Index", "Book", new { Area = "Book" })">
+            Cancel
+        </a>
+    </div>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#cform").validate({
+            normalizer: function (value) {
+                return $.trim(value);
+            },
+            rules: {
+                Publisher: {
+                    required: true,
+                },
+                Title: {
+                    required: true,
+                },
+                AuthorLastName: {
+                    required: true,
+                },
+                AuthorFirstName: {
+                    required: true
+                },
+                Price: {
+                    required: true
+                }
+            },
+            messages: {
+                Publisher: {
+                    required: "Enter Publisher"
+                },
+                Title: {
+                    required: "Enter Title"
+                },
+                AuthorLastName: {
+                    required: "Enter Author Last Name"
+                },
+                AuthorFirstName: {
+                    required: "Enter Author First Name"
+                },
+                Price: {
+                    required: "Enter Price"
+                }
+            }
+        });
+    });
+
+    function Create() {
+       
+            var formBook = new FormData();
+            var other_data = $('#cform').serializeArray();
+
+            $.each(other_data, function (key, input) {
+                formBook.append(input.name, input.value.replace(/\s+/g, ' ').trim());
+            });
+            $.ajax({
+                type: "POST",
+                contentType: false,
+                processData: false,
+                url: '@Url.Action("Create", "Book", new { Area = "Book" })',
+                data: formBook,
+                success: function (data) {
+                    if (data.result == true) {
+                    window.location.href = '@Url.Action("Index","Book",  new { Area = "Book" })';
+                    }
+                    else {
+                        toastr.info(data.strMessage);
+                    }
+                }
+            });
+    }
+
+</script>
